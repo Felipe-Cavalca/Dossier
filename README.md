@@ -1,8 +1,8 @@
-# BifrostPHP - Front-end Module
+# Bifrost - Front-end Module
 
 ## English
 
-This repository contains the BifrostPHP front-end source code base.
+This repository contains the Bifrost front-end source code base.
 
 ### Installation
 
@@ -34,7 +34,7 @@ Follow the steps below to run Docker Compose:
 
 ## Português
 
-Este repositório contém a base de código-fonte do front-end do BifrostPHP.
+Este repositório contém a base de código-fonte do front-end do Bifrost.
 
 ### Instalação
 
