@@ -137,25 +137,3 @@ jobs:
           git checkout -b latest-release || git checkout latest-release
           git reset --hard origin/main
           git push --force origin latest-release
-
-  publish_docker_image_app:
-    needs: create_tag_and_draft_release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Login no GitHub Container Registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-
-      - name: Construir e Publicar Imagem Docker do APP
-        run: |
-          REPO_NAME=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
-          TAG="${{ needs.create_tag_and_draft_release.outputs.new_tag }}"
-
-          docker build -t ghcr.io/${REPO_NAME}:${TAG} -f app/Dockerfile app/
-          docker tag ghcr.io/${REPO_NAME}:${TAG} ghcr.io/${REPO_NAME}:latest
-          docker push ghcr.io/${REPO_NAME}:${TAG}
-          docker push ghcr.io/${REPO_NAME}:latest
