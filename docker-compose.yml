@@ -1,0 +1,14 @@
+services:
+  app:
+    container_name: dossier-app
+    build:
+      context: ./app
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+    volumes:
+      - ./app:/usr/local/apache2/htdocs/ # DEV
+    mem_limit: 512m
+    cpus: '0.25'
