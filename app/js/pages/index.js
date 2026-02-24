@@ -6,11 +6,9 @@ const bifrost = new Bifrost(
 
         bifrost.form("form", () => {
             alert().success("Form submitted successfully!");
-            // return false;
+            return true;
         }, async (response) => {
-            document.querySelector("c-alert").style.display = 'block'
-
-            document.querySelector("#response-form").innerHTML = await response.text();
+            alert().success("Response received from server: " + JSON.stringify(await response.json()));
         });
     }
 );
