@@ -41,6 +41,20 @@
             }
         },
 
+        // Build Front
+        {
+            "label": "BIFROST FRONT docker-compose up",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "-f",
+                "app/docker-compose.yml",
+                "up",
+                "--build",
+                "-d"
+            ]
+        },
+
         // Scripts API
         {
             "label": "Mesclar Bifrost-API/last-release com a branch atual",
@@ -65,14 +79,6 @@
             "linux": {
                 "command": "git remote | grep banco && git remote set-url banco https://github.com/Felipe-Cavalca/Bifrost-Database.git || git remote add banco https://github.com/Felipe-Cavalca/Bifrost-Database.git; git fetch banco && git merge banco/latest-release --allow-unrelated-histories"
             }
-        },
-
-        // Scripts do front
-        {
-            "label": "BIFROST FRONT docker-compose up",
-            "type": "shell",
-            "command": "docker-compose",
-            "args": ["-f", "app/docker-compose.yml", "up", "--build", "-d"]
         }
 
     ]
