@@ -41,6 +41,20 @@
             }
         },
 
+        // Build Front
+        {
+            "label": "BIFROST FRONT docker-compose up",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "-f",
+                "app/docker-compose.yml",
+                "up",
+                "--build",
+                "-d"
+            ]
+        },
+
         // Scripts API
         {
             "label": "Mesclar Bifrost-API/last-release com a branch atual",

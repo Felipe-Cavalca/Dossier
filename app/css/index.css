@@ -1,0 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background, #e6e9ec);
+    color: var(--color-text, #1a1a1a);
+    font-family: sans-serif;
+}
+
+pre {
+    text-align: left;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid var(--color-border, #999999);
+    border-radius: 4px;
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    -webkit-tap-highlight-color: transparent;
+}

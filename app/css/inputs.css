@@ -1,0 +1,58 @@
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid;
+    background-color: var(--input-bg-color, "#ffffff");
+    color: var(--input-color, "#1a1a1a");
+    outline: none;
+    padding-right: 25px;
+}
+
+input::placeholder {
+    color: var(--input-placeholder-color, "#999999");
+}
+
+input:invalid {
+    border-color: var(--input-invalid-border-color, "#dc3545");
+    box-shadow: 0 0 10px var(--input-invalid-border-color, "#dc3545");
+}
+
+input[required]:placeholder-shown,
+input:invalid {
+    background-image: url("/assets/icons/alert.png");
+    background-repeat: no-repeat;
+    background-position: right 1px center;
+    background-size: 25px 25px;
+}
+
+input:invalid {
+    background-image: url("/assets/icons/warning.png");
+}
+
+input:placeholder-shown {
+    border-color: initial;
+    box-shadow: none;
+}
+
+input:focus {
+    border-color: var(--input-focus-border-color, "#007bff");
+    box-shadow: 0 0 10px var(--input-focus-border-color, "#007bff");
+}
+
+input[required]:placeholder-shown:focus {
+    border-color: var(--input-focus-border-color, "#007bff");
+    box-shadow: 0 0 10px var(--input-focus-border-color, "#007bff");
+}
+
+input~span.danger,
+input:valid~span.danger {
+    display: none;
+    height: 24px;
+    color: var(--span-danger-color, "#dc3545");
+}
+
+input:not(:placeholder-shown):not(:focus):invalid~span.danger {
+    display: block;
+}
