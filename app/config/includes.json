@@ -1,0 +1,54 @@
+{
+    "cssFiles": [
+        "/config/variaveis.css",
+        "/libs/notyf/notyf.min.css",
+        "/css/index.css",
+        "/css/buttons.css",
+        "/css/inputs.css"
+    ],
+    "jsFiles": [
+        "/libs/customComponents-1.8.4-29.min.js",
+        "/libs/notyf/notyf.min.js",
+        "/js/global/funcoes.js",
+        "/js/inputs.js"
+    ],
+    "metaData": {
+        "meta": [
+            {
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1"
+            },
+            {
+                "httpEquiv": "X-UA-Compatible",
+                "content": "IE=edge"
+            },
+            {
+                "charset": "UTF-8"
+            },
+            {
+                "name": "theme-color",
+                "content": "#000000"
+            },
+            {
+                "name": "description",
+                "content": "Bifrost: um framework web"
+            }
+        ],
+        "link": [
+            {
+                "rel": "shortcut icon",
+                "href": "/assets/global/favicon.ico",
+                "type": "image/x-icon"
+            },
+            {
+                "rel": "manifest",
+                "href": "/config/manifest.json"
+            },
+            {
+                "rel": "preconnect",
+                "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+            }
+        ]
+    },
+    "tags": []
+}

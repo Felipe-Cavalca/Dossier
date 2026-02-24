@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Página Inicial</title>
+</head>
+
+<body>
+    <!-- O conteúdo será inserido aqui -->
+
+    <script id="coreJs" src="../core/core.js"></script>
+    <script type="text/javascript">
+        const before = (Bifrost) => {
+            console.log('Antes de tudo');
+        }
+        const after = (Bifrost) => {
+            console.log('Depois de tudo');
+        }
+        const bifrost = new Bifrost(before, after);
+    </script>
+</body>
+
+</html>

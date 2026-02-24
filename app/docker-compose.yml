@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:80"
+    env_file:
+      - ./../.env
+    volumes:
+      - ./:/usr/local/apache2/htdocs/ # DEV
+    mem_limit: 512m
+    cpus: '0.25'

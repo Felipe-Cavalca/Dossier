@@ -1,0 +1,16 @@
+{
+    "short_name": "Dossier",
+    "name": "Dossier",
+    "icons": [
+        {
+            "src": "/assets/global/server.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#16151d",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#16151d"
+}
