@@ -15,43 +15,36 @@
         <h2>{{slogan}}</h2>
     </c-maximized>
 
-    <c-maximized id="test">
+    <c-maximized>
         <c-card>
             <section id="text-form">
-                <h3>Exemplo de form</h3>
-                <small>Apenas um exemplo de designe de formulário.</small>
+                <h3>Login</h3>
+                <small>Entre para aproveitar a plataforma</small>
             </section>
             <form action="exampleResponse.json" method="POST" data-noApi="true">
                 <section>
-                    <label for="filed-name">Qual o seu nome verdadeiro?</label>
-                    <input type="text" name="name" id="filed-name" placeholder="Fulano da silva" required minlength="4"
-                        autocomplete="on" pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ]+(\s+[a-zA-ZÀ-ÖØ-öø-ÿ]+)+$" inputmode="latin-name"
-                        autocapitalize="words" spellcheck="true">
+                    <label for="email">Qual o seu email ?</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="fulano@email.com"
+                        required >
                     <span class="danger">
-                        <b>Esse deve ser seu nome real!</b>
-                    </span>
-                </section>
-                <section>
-                    <label for="email">Me diga, qual o seu melhor email ?</label>
-                    <input type="email" name="email" id="email" placeholder="fulano@email.com" autocomplete="on"
-                        inputmode="email" autocapitalize="none">
-                    <span class="danger">
-                        <b>O email deve estar correto!</b>
+                        <b>Isso não me parece um email valido!</b>
                     </span>
                 </section>
                 <section>
                     <label for="confirmPassword">Confirme sua senha agora</label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="***" required
-                        minlength="4" autocomplete="off">
-                    <span class="danger">
-                        <b>Essa senha deve ter no mínimo 4 caracteres.</b>
-                    </span>
+                    <input
+                        type="password"
+                        name="confirmPassword"
+                        id="confirmPassword"
+                        placeholder="***"
+                        autocomplete="off"
+                         >
                 </section>
                 <section>
-                    <button type="submit">Testar</button>
-                </section>
-                <section>
-                    <progress value="32" max="100"> 32% </progress>
+                    <button type="submit">Login</button>
                 </section>
             </form>
         </c-card>
